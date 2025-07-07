@@ -1,0 +1,251 @@
+/* ===== Layout chung ===== */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.product-item {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 250px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: box-shadow 0.2s ease;
+  min-height: 550px; /* Chiều cao tối thiểu để các khung đều nhau */
+}
+
+.product-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Ảnh sản phẩm ===== */
+.food-item-img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  overflow: hidden;
+}
+
+.Product-item-image {
+  max-height: 180px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ===== Nội dung ===== */
+.product-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding-top: 10px;
+}
+
+.product-item-brand {
+  font-weight: 600;
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.product-item-name {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.4;
+  color: #2c3e50;
+}
+
+.product-item-desc {
+  font-size: 13px;
+  color: #666;
+  flex-grow: 0;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  max-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ===== Dung tích (size) ===== */
+.product-item-sizes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.product-size-btn {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.2px;
+}
+
+.product-size-btn:hover {
+  background-color: #f3f3f3;
+  border-color: #bbb;
+}
+
+.product-size-btn.active {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* ===== Giá & giảm giá ===== */
+.product-item-price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.new-price {
+  color: #e60023;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.old-price {
+  color: #999;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.discount {
+  background-color: #e6f4ea;
+  color: #00a651;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* ===== SALE badge ===== */
+.discount-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #e60023;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 13px;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* ===== Action buttons ===== */
+.product-item-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.add-to-cart-btn {
+  background-color: #f55a2c !important;
+  border: 1px solid #f55a2c !important;
+  color: white !important;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer !important;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto !important;
+  min-width: 80px;
+  letter-spacing: 0.3px;
+}
+
+.add-to-cart-btn.compact {
+  padding: 8px;
+  min-width: 40px;
+  font-size: 16px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #e04a1c !important;
+  border-color: #e04a1c !important;
+}
+
+.add-to-cart-btn:active {
+  background-color: #d03f17 !important;
+}
+
+.wishlist-btn-item {
+  flex-shrink: 0;
+  align-self: center;
+}
+
+/* ===== HẾT HÀNG ===== */
+.out-of-stock-badge {
+  position: absolute;
+  top: 25%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .product-item-actions {
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .add-to-cart-btn {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .product-size-btn {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}

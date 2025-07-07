@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  min-height: 100vh;
+  line-height: 1.6;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.5em;
+  color: #1a1a1a;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+  color: #4a4a4a;
+}
+
+/* Button text */
+button {
+  font-family: inherit;
+  font-weight: 500;
+}
+
+/* Input text */
+input, textarea, select {
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Improve text rendering */
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Better font fallbacks for different languages */
+html {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Ensure consistent font rendering across browsers */
+body, input, textarea, select, button {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.a{
+  text-decoration: none;
+  color: indianred;
+}
+.app{
+  width: 80%;
+  margin: auto;
+}
+
+/* ===== CUSTOM TOAST STYLES ===== */
+.custom-toast {
+  min-height: 50px !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  margin-bottom: 8px !important;
+  animation-duration: 0.3s !important;
+}
+
+.custom-toast-body {
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 13px !important;
+  line-height: 1.3 !important;
+  font-weight: 500 !important;
+}
+
+.custom-toast-progress {
+  height: 3px !important;
+  animation: Toastify__trackProgress linear !important;
+}
+
+/* Force toast container positioning */
+.Toastify__toast-container {
+  z-index: 9999 !important;
+  position: fixed !important;
+}
+
+/* Ensure toast auto-close works */
+.Toastify__toast {
+  animation-duration: 0.3s !important;
+}
+
+.Toastify__toast--close {
+  animation-duration: 0.3s !important;
+}
+
+/* Đảm bảo progress bar hoạt động */
+.Toastify__progress-bar {
+  height: 3px !important;
+}
+
+.Toastify__progress-bar--animated {
+  animation: Toastify__trackProgress linear !important;
+}
+
+/* Đảm bảo autoClose hoạt động */
+.Toastify__toast {
+  animation-duration: 0.3s !important;
+}
+
+.Toastify__toast--success {
+  animation-duration: 0.3s !important;
+}
+
+/* Success Toast */
+.Toastify__toast--success.custom-toast {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  color: white !important;
+}
+
+/* Error Toast */
+.Toastify__toast--error.custom-toast {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  color: white !important;
+}
+
+/* Info Toast */
+.Toastify__toast--info.custom-toast {
+  background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+  color: white !important;
+}
+
+/* Warning Toast */
+.Toastify__toast--warning.custom-toast {
+  background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+  color: white !important;
+}
+
+/* Close Button */
+.Toastify__close-button {
+  color: white !important;
+  opacity: 0.8 !important;
+  font-size: 16px !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1 !important;
+}
+
+/* Container */
+.Toastify__toast-container {
+  width: 300px !important;
+  padding: 0 !important;
+}
+
+/* Progress Bar Colors */
+.Toastify__toast--success .custom-toast-progress {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.Toastify__toast--error .custom-toast-progress {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.Toastify__toast--info .custom-toast-progress {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.Toastify__toast--warning .custom-toast-progress {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Animation */
+.Toastify__toast {
+  animation: slideInRight 0.3s ease-out !important;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .Toastify__toast-container {
+    width: 280px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    right: auto !important;
+  }
+
+  .custom-toast {
+    font-size: 12px !important;
+    min-height: 45px !important;
+    padding: 6px 10px !important;
+  }
+
+  .custom-toast-body {
+    font-size: 12px !important;
+  }
+}
+

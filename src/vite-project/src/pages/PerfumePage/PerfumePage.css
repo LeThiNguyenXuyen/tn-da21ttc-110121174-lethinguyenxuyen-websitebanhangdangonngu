@@ -1,0 +1,164 @@
+/* Layout tổng */
+.perfume-page {
+  padding: 40px 60px;
+  background: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.perfume-page h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 28px;
+}
+
+.perfume-page .product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.perfume-page .no-products {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.perfume-page .no-products p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Sidebar trái - bộ lọc */
+.filter-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  border-right: 1px solid #eee;
+  padding-right: 20px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 80px;
+}
+
+/* Tiêu đề bộ lọc */
+.filter-group {
+  margin-bottom: 30px;
+}
+
+.filter-group h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  color: #222;
+  border-left: 3px solid #c19a6b;
+  padding-left: 8px;
+}
+
+.filter-group label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #333;
+  transition: 0.2s;
+}
+
+.filter-group label:hover {
+  color: #c19a6b;
+}
+
+.filter-group input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.1);
+  accent-color: #c19a6b;
+}
+
+/* Ô tìm kiếm thương hiệu */
+.filter-sidebar input[type="text"] {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Danh sách sản phẩm bên phải */
+.product-results {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+/* Item sản phẩm (gợi ý styling) */
+.product-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  transition: box-shadow 0.3s;
+  background-color: #fff;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.product-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 8px 0 4px;
+  color: #111;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: #c19a6b;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .perfume-page {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .filter-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    max-height: none;
+    position: relative;
+  }
+
+  .product-results {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .product-results {
+    grid-template-columns: 1fr;
+  }
+}

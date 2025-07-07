@@ -1,0 +1,329 @@
+.featured-promotions {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.featured-promotions-header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.featured-promotions-header h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.featured-promotions-header p {
+  color: #4a5568;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.view-all-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+}
+
+.view-all-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Promotions Carousel */
+.promotions-carousel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.promotion-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.promotion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.promotion-card.featured {
+  border: 2px solid #667eea;
+  transform: scale(1.02);
+}
+
+.promotion-card.featured::before {
+  content: '⭐ NỔI BẬT';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #744210;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.7em;
+  font-weight: 700;
+  z-index: 10;
+}
+
+.promotion-card-header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.promotion-card-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  transform: rotate(45deg);
+}
+
+.promotion-value {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.value-text {
+  display: block;
+  font-size: 0.9em;
+  opacity: 0.9;
+  margin-bottom: 5px;
+}
+
+.value-number {
+  display: block;
+  font-size: 2.5em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.promotion-card-body {
+  padding: 25px;
+}
+
+.promotion-title {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.promotion-description {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.95em;
+}
+
+.promotion-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.time-remaining,
+.min-order {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9em;
+  color: #4a5568;
+}
+
+.time-remaining {
+  color: #e53e3e;
+  font-weight: 600;
+}
+
+.clock-icon,
+.cart-icon {
+  font-size: 1.1em;
+}
+
+.applicable-products-preview {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.products-label {
+  display: block;
+  font-size: 0.85em;
+  color: #4a5568;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.products-images {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-thumb {
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.more-products {
+  background: #e2e8f0;
+  color: #4a5568;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.promotion-card-footer {
+  padding: 20px 25px;
+  background: #f8f9fa;
+  border-top: 1px solid #e2e8f0;
+}
+
+.use-now-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.use-now-btn:hover {
+  background: linear-gradient(135deg, #38a169, #2f855a);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(72, 187, 120, 0.4);
+}
+
+/* Promotion Stats */
+.promotion-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.stat-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.stat-number {
+  font-size: 2em;
+  font-weight: 700;
+  color: #667eea;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .featured-promotions {
+    padding: 0 15px;
+    margin: 30px auto;
+  }
+  
+  .featured-promotions-header h2 {
+    font-size: 2em;
+  }
+  
+  .featured-promotions-header p {
+    font-size: 1em;
+  }
+  
+  .promotions-carousel {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .promotion-card.featured {
+    transform: none;
+  }
+  
+  .promotion-card-header,
+  .promotion-card-body,
+  .promotion-card-footer {
+    padding: 20px;
+  }
+  
+  .value-number {
+    font-size: 2em;
+  }
+  
+  .promotion-title {
+    font-size: 1.2em;
+  }
+  
+  .promotion-meta {
+    gap: 8px;
+  }
+  
+  .promotion-stats {
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+  }
+  
+  .stat-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .stat-number {
+    font-size: 1.5em;
+  }
+}
+
+/* Removed fadeInUp animation for cleaner look */
+.promotion-card {
+  /* Static styling without animation */
+}

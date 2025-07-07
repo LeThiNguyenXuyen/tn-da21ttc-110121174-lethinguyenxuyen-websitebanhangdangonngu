@@ -1,0 +1,15 @@
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f8f9fa;
+}
+
+.app {
+  display: flex;
+}
+
+.main-content {
+  padding: 20px;
+  flex: 1;
+}

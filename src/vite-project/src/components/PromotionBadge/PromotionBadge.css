@@ -1,0 +1,151 @@
+.promotion-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  min-width: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.promotion-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Các loại badge khác nhau */
+.promotion-badge-percentage {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+}
+
+.promotion-badge-fixed {
+  background: linear-gradient(135deg, #4834d4, #686de0);
+}
+
+.promotion-badge-special {
+  background: linear-gradient(135deg, #00d2d3, #54a0ff);
+}
+
+.promotion-badge-order {
+  background: linear-gradient(135deg, #5f27cd, #a55eea);
+}
+
+.promotion-badge-default {
+  background: linear-gradient(135deg, #ff9ff3, #f368e0);
+}
+
+.promotion-text {
+  display: block;
+  line-height: 1.2;
+}
+
+/* Tooltip */
+.promotion-tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.promotion-badge:hover .promotion-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.promotion-tooltip-content {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: normal;
+  white-space: nowrap;
+  max-width: 200px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.promotion-tooltip-content h4 {
+  margin: 0 0 4px 0;
+  font-size: 13px;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.promotion-tooltip-content p {
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+  white-space: normal;
+}
+
+.promotion-tooltip-content small {
+  color: #ccc;
+  font-size: 11px;
+}
+
+/* Arrow cho tooltip */
+.promotion-tooltip-content::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .promotion-badge {
+    font-size: 10px;
+    padding: 3px 6px;
+    top: 5px;
+    left: 5px;
+  }
+  
+  .promotion-tooltip-content {
+    font-size: 11px;
+    padding: 8px 10px;
+    max-width: 150px;
+  }
+}
+
+/* Removed promotionPulse animation for cleaner look */
+.promotion-badge.new-promotion {
+  /* Static styling without animation */
+}
+
+/* Badge cho trang chi tiết sản phẩm */
+.promotion-badge.large {
+  position: static;
+  display: inline-block;
+  font-size: 14px;
+  padding: 6px 12px;
+  margin: 5px 0;
+  border-radius: 6px;
+}
+
+.promotion-badge.large .promotion-text {
+  font-size: 14px;
+}
+
+/* Badge trong danh sách khuyến mãi */
+.promotion-badge.list-item {
+  position: static;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}

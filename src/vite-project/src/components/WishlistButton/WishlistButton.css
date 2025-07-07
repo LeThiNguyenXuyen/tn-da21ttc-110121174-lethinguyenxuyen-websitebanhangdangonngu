@@ -1,0 +1,128 @@
+.wishlist-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  background: white;
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  /* Removed transition */
+  min-width: 140px;
+}
+
+.wishlist-button:hover {
+  border-color: #f55a2c;
+  color: #f55a2c;
+  /* Removed transform and box-shadow */
+}
+
+.wishlist-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.wishlist-button.in-wishlist {
+  border-color: #ff6b6b;
+  background: #fff5f5;
+  color: #ff6b6b;
+}
+
+.wishlist-button.in-wishlist:hover {
+  border-color: #ff5252;
+  background: #ffebee;
+  color: #ff5252;
+}
+
+.heart-icon {
+  font-size: 18px;
+  /* Removed transition */
+}
+
+.wishlist-button:hover .heart-icon {
+  /* Removed scale transform */
+}
+
+.wishlist-button.in-wishlist .heart-icon {
+  /* Removed heartbeat animation */
+}
+
+
+.button-text {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Compact version */
+.wishlist-button.compact {
+  min-width: auto;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.wishlist-button.compact .heart-icon {
+  font-size: 16px;
+}
+
+.wishlist-button.compact .button-text {
+  display: none;
+}
+
+/* Icon only version */
+.wishlist-button.icon-only {
+  min-width: auto;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.wishlist-button.icon-only .button-text {
+  display: none;
+}
+
+.wishlist-button.icon-only .heart-icon {
+  font-size: 20px;
+}
+
+/* Large version */
+.wishlist-button.large {
+  padding: 15px 25px;
+  font-size: 16px;
+  min-width: 160px;
+}
+
+.wishlist-button.large .heart-icon {
+  font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wishlist-button {
+    padding: 10px 16px;
+    font-size: 13px;
+    min-width: 120px;
+  }
+  
+  .wishlist-button.large {
+    padding: 12px 20px;
+    font-size: 14px;
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wishlist-button {
+    padding: 8px 12px;
+    font-size: 12px;
+    min-width: 100px;
+  }
+  
+  .heart-icon {
+    font-size: 16px;
+  }
+}

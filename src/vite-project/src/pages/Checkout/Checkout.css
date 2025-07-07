@@ -1,0 +1,239 @@
+.checkout-page {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.address-card {
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.address-card.selected {
+  border: 2px solid #2e7d32;
+  background-color: #e8f5e9;
+  box-shadow: 0 0 8px rgba(0, 128, 0, 0.2);
+}
+
+
+.checkout-form {
+  flex: 2;
+}
+
+.checkout-form h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-grid input,
+.form-grid select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  width: 100%;
+}
+
+.form-grid select {
+  cursor: pointer;
+}
+
+.form-grid input:focus,
+.form-grid select:focus {
+  outline: none;
+  border-color: #f55a2c;
+  box-shadow: 0 0 5px rgba(245, 90, 44, 0.3);
+}
+
+.checkout-submit {
+  margin-top: 25px;
+  background-color: #f55a2c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.checkout-summary {
+  flex: 1;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  min-width: 250px;
+  height: fit-content;
+}
+
+.checkout-summary h3 {
+  margin-bottom: 20px;
+}
+
+.checkout-summary p {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.checkout-summary .total {
+  font-weight: bold;
+}
+.payment-method {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.payment-method label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.payment-method label:hover {
+  background-color: #f9f9f9;
+}
+
+.payment-method input[type="radio"] {
+  accent-color: #f55a2c;
+}
+
+.pay-icon {
+  width: 24px;
+  height: 24px;
+}
+/* ===== Địa chỉ giao hàng ===== */
+.address-list {
+  flex: 1;
+  max-width: 400px;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.address-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 15px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.address-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.address-card.selected {
+  border-color: #2e7d32;
+  background-color: #e8f5e9;
+  box-shadow: 0 0 8px rgba(0, 128, 0, 0.2);
+}
+
+.address-card button {
+  background-color: #f55a2c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+  margin-right: 10px; /* Thêm khoảng cách giữa các nút */
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+.address-card button:hover {
+  background-color: #e04a1c;
+}
+
+/* Hiển thị thông tin địa chỉ */
+.address-card p {
+  font-size: 14px;
+  color: #333;
+  margin: 6px 0;
+}
+
+/* Button thay đổi địa chỉ */
+.change-address-btn {
+  background-color: #f55a2c;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.change-address-btn:hover {
+  background-color: #e04a1c;
+}
+
+.checkout-page {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Section Address */
+.checkout-form {
+  flex: 2;
+}
+
+.checkout-form h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.address-list {
+  max-height: 300px;       /* 👈 Giới hạn chiều cao */
+  overflow-y: auto;        /* 👈 Cho phép cuộn dọc */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Tuỳ chọn: làm đẹp scrollbar */
+.address-list::-webkit-scrollbar {
+  width: 6px;
+}
+.address-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+.hidden {
+  display: none;
+}

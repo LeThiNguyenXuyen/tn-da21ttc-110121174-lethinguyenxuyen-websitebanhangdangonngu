@@ -1,0 +1,17 @@
+.header {
+    height: 600px;
+    width: 100%;
+    max-width: 100%;
+    margin: 30px auto;
+    background: url('/bg1.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    color: #000;
+  }
+
+
+
+  
